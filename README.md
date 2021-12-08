@@ -1,14 +1,6 @@
-# Docker Build
-    docker build -t <image_name> ./ 
-    docker-compose up --build
-
-    docker-compose down
-    docker-compose up -d
-    docker-compose --env-file .env up --build
-
-# Run
-    docker run -p 80:80 <images_name>
-
+# Docker Build and Run
+    docker build -t <images_name_01> ./
+    docker run -p 8001:80 <images_name_01>
 
 # Remove
     docker rm -vf $(docker ps -aq);
@@ -17,3 +9,7 @@
 
 # Other
     docker-compose restart 
+    docker-compose up --build
+    docker-compose down
+    docker-compose up -d
+    docker-compose --env-file .env up --build
